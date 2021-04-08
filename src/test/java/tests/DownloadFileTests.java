@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
+import utils.Files;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,7 +23,7 @@ public class DownloadFileTests {
 
         open("https://github.com/selenide/selenide/blob/master/README.md");
         File downloadFile = $("#raw-url").download();
-        String fileContent = FileUtils.readFileToString(downloadFile, StandardCharsets.UTF_8);
+        String fileContent = Files.readTextFromFile(downloadFile);
         assertThat(fileContent, containsString("Selenide = 1UI Testing Framework powered by Selenium WebDriver"));
     }
 
