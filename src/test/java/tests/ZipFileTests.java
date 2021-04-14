@@ -19,7 +19,7 @@ public class ZipFileTests {
         String zipFilePath = "./src/test/resources/files/11.zip";
         String unzipFolderPath = "./src/test/resources/files/unzip";
         String zipPassword = "";
-        String unzipTxtFilePath = "./src/test/resources/files/unzip/1.txt";
+        String unzipTxtFilePath = "./src/test/resources/files/unzip/11.txt";
         String expectedData = "Ahoy";
 
 
