@@ -19,7 +19,7 @@ public class PdfFileTests {
         String expectedData = "alexdromanov";
 
         PDF pdf = new PDF(getFile(pdfFilePath));
-        assertThat(pdf, containsText(expectedData));
+        assertThat(pdf, PDF.containsText(expectedData));
 
     }
 }
