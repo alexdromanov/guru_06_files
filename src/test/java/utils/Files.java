@@ -7,8 +7,17 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class Files {
-  public static String readTextFromFile(File file) throws IOException {
-      return FileUtils.readFileToString(file, StandardCharsets.UTF_8);
-  }
+    public static String readTextFromFile(File file) throws IOException {
+        return FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+    }
+
+    public static String readTextFromPath(String path) throws IOException {
+        File file = new File(path);
+        return readTextFromFile(getFile(path));
+    }
+
+    public static File getFile(String path) {
+        return new File(path);
+    }
 }
 
